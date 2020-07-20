@@ -13,8 +13,8 @@ jspm_packages
 .node_repl_history
 .results.json
 /.bundle
-/db/*.sqlite3
-/db/*.sqlite3-journal
+./pokemon-teams-backend/db/*.sqlite3
+./pokemon-teams-backend/db/*.sqlite3-journal
 /log/*
 !/log/.keep
 /tmp
