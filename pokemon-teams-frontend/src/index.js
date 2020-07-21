@@ -27,7 +27,7 @@ const buttonClicked = (event) =>
 }
 
 //function addPokemon(parent:HTML Element) : void
-const addPokemon = (parent) =>
+const addPokemon = (table) =>
 {
   let configObj =
   {
@@ -37,11 +37,12 @@ const addPokemon = (parent) =>
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    body: JSON.stringify({trainer_id: parent.dataset.id})
-  };
+    body: JSON.stringify({trainer_id: table.parentElement.dataset.id})
+  };configObj.body
+  console.log()
   fetch(POKEMONS_URL,configObj)
   .then(resp => resp.json())
-  .then(json => appendPoke(json,parent));
+  .then(json => appendPoke(json,table));
 }
 
 //appendPoke(json:jsonobj):tableElement
